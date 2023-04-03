@@ -1,10 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 body {
     display:flex;
+    height: 100vh;
+    width: 100vw;
 }
 
 .web {
@@ -21,14 +24,15 @@ body {
 
 .sidebar {
     display:flex;
-    background-color: blue;
+    background-color: #7286d3;
     height: 100vh;
     width: 12rem;
 }
 
 
 .top {
-    background-color: violet;
+    display: flex;
+    background-color: #b2a4ff;
     width: 100vw;
     height: 5rem;
 }
@@ -38,11 +42,14 @@ body {
 }
 
 .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 1rem;
-    background-color: tan;
-    width: 2rem;
-    height: 2rem;
-    text-align: center;
+    background-color: #fdf7c3;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5px;
 }
 
 .content {
@@ -51,10 +58,75 @@ body {
 }
 
 .red {
-    align-self: center;
-    justify-self: center;
-    background-color: red;
-    width: 10rem;
-    height: 10rem;
+    margin: auto;
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #ffb4b4;
 }
 
+button {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #3c7eb2;
+    color: white;
+    border: none;
+}
+
+.red div{
+    margin: 4rem 0 1rem 0;
+}
+
+.footer {
+    height: 5rem;
+    display:flex;
+    align-items: center;
+}
+
+.footer .pill{
+    margin: 0 2rem;
+}
+
+.dot {
+    height: 4rem;
+    width: 4rem;
+    background-color: #ffd966;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.pill {
+    height:3rem;
+    width:12rem;
+    border-radius: 30px;
+    background-color: red;
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .sidebar{
+        display:none
+    }
+
+    .top{
+        flex-direction: row-reverse;
+    }
+    .top .black{
+        display: block;
+    }
+
+     .red
+     {
+        margin-top: 0;
+        width: 100vw;
+     }
+
+     .footer{
+        flex-direction: row-reverse;
+        margin-top: auto;
+     }
+}
+  
